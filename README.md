@@ -1,36 +1,72 @@
-# User Management CRUD App
+# ⚛️ CRUD de Usuarios con React y LocalStorage
 
-## Introduction ✨
+Este proyecto es una aplicación web simple que demuestra las cuatro operaciones básicas de la persistencia de datos (CRUD), utilizando **React** para la interfaz y el **LocalStorage** del navegador para el almacenamiento.
 
-This is a hands-on project that demonstrates a basic CRUD (Create, Read, Update and Delete) application for managing users.
+Este desarrollo fue realizado como parte de la práctica Fullstack de **Oplesk Academy**.
 
-## Features ⚙️
+---
 
-* Create, read, update and delete users
-* User data is stored in the browser's localstorage.
-* Developed in React with CSS and JavaScript
+## 🚀 Funcionalidades y Operaciones CRUD
 
-## System Requirements 🔧
+La aplicación permite la gestión completa de una lista de usuarios (o cualquier entidad de datos):
 
-Make sure you have Node.js and npm installed on your system before running the application. This project requires the following dependencies to be installed:
+| Operación | Descripción | Implementación |
+| :--- | :--- | :--- |
+| **C**reate (Crear) | Agregar un nuevo usuario a la lista. | Formulario de entrada que genera un nuevo objeto y lo guarda en `LocalStorage`. |
+| **R**ead (Leer) | Mostrar la lista completa de usuarios existentes. | Lectura de datos desde `LocalStorage` al montar el componente principal y mapeo de la lista en la interfaz. |
+| **U**pdate (Actualizar) | Modificar la información de un usuario existente. | Apertura de un formulario de edición prellenado que sobrescribe el registro en `LocalStorage`. |
+| **D**elete (Eliminar) | Remover un usuario de la lista. | Función que filtra el array de usuarios y actualiza el `LocalStorage` sin el registro eliminado. |
 
-* Node.js (version 14 or higher)
-* npm (version 6 or higher)
-* react (version 18.3.1)
-* react-dom (version 18.3.1)
-* react-scripts (version 5.0.1)
-* react-router-dom (version 6.26.2)
+---
 
-You can install all these dependencies using "npm install" with the "dependencies.txt" file
+## 💻 Stack Tecnológico Utilizado
 
-* npm install -r dependencies.txt
+| Categoría | Tecnología | Rol en el Proyecto |
+| :--- | :--- | :--- |
+| **Framework UI** | **React** | Construcción de la interfaz de usuario con componentes funcionales. |
+| **Gestión de Estado** | **React Hooks** | Uso de `useState` para el estado local y `useEffect` para sincronizar con `LocalStorage`. |
+| **Persistencia de Datos** | **LocalStorage** | Simulación del almacenamiento de una base de datos directamente en el navegador. |
+| **Estilización** | **CSS** (o un framework de CSS si aplica) | Diseño y presentación de los componentes. |
 
-## Getting Started 🚀
+---
 
-To run the application you must use the following command in the terminal:
+## ⚙️ Arquitectura y Puntos Clave de React
 
-* npm start
+Este proyecto resalta las siguientes habilidades específicas en React:
 
-## Contribution 👍
+* **Manejo de Formularios:** Control de componentes de formulario mediante el estado de React (Controlled Components).
+* **Gestión de Efectos:** Uso de `useEffect` para **sincronizar el estado de React** con el `LocalStorage` cada vez que la lista de usuarios cambia.
+* **Reutilización de Componentes:** Diseño de componentes separados para la tabla de visualización, el formulario de creación y los elementos individuales de la lista.
+* **Paso de Props:** Comunicación de funciones y datos entre componentes padres e hijos (e.g., pasar la función `eliminarUsuario` al componente de fila de usuario).
 
-If you want to contribute to this project, you can report issues or submit feature requests on the GitHub repository. You can also contribute code by submitting a pull request.
+---
+
+## 🎬 Cómo Ejecutar el Proyecto
+
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone [https://github.com/Girouetten21/CRUD-React-LocalStorage.git](https://github.com/Girouetten21/CRUD-React-LocalStorage.git)
+    cd CRUD-React-LocalStorage
+    ```
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    # o 
+    yarn install
+    ```
+3.  **Ejecutar la aplicación:**
+    ```bash
+    npm start
+    # o
+    yarn start
+    ```
+    La aplicación se abrirá automáticamente en `http://localhost:3000`.
+
+---
+
+## 🔗 Ver Demo (Si aplica)
+
+* [**VER DEMO EN VIVO**](https://crud-react-localstorage.vercel.app)
+
+---
+**Desarrollado por:** [@Girouetten21](https://github.com/Girouetten21)
